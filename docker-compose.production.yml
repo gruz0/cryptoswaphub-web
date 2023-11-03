@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    stdin_open: true
+    tty: true
+    ports:
+      - 127.0.0.1:3000:3000
+      # NOTE: In case, if you want to use ./ops/nginx.sh, uncomment this line:
+      # - 3000:3000
