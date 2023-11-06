@@ -14,7 +14,10 @@ export default function Home() {
             Welcome to Crypto Swap Hub 👋
           </h1>
 
-          <Client chainId={+publicRuntimeConfig.chainId} />
+          <Client
+            chainId={+publicRuntimeConfig.chainId}
+            tokenAddress={publicRuntimeConfig.tokenContract}
+          />
         </div>
       </div>
     </WagmiContext>

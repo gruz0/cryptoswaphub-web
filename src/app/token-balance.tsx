@@ -6,9 +6,14 @@ import { useAccount, useBalance } from 'wagmi'
 interface Props {
   chainId: number
   tokenAddress?: `0x${string}`
+  fractionDigits?: number
 }
 
-export default function Component({ chainId, tokenAddress }: Props) {
+export default function Component({
+  chainId,
+  tokenAddress,
+  fractionDigits = 8,
+}: Props) {
   const { isConnected, address } = useAccount()
   const { data, isError, isLoading, error } = useBalance({
     address: address,
@@ -23,7 +28,7 @@ export default function Component({ chainId, tokenAddress }: Props) {
 
   return (
     <>
-      {(+data.formatted).toFixed(8)} {data.symbol}
+      {(+data.formatted).toFixed(fractionDigits)} {data.symbol}
     </>
   )
 }
