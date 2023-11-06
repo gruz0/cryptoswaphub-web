@@ -1,6 +1,9 @@
+import getConfig from 'next/config'
 import React from 'react'
 import Client from './client'
 import WagmiContext from './wagmi'
+
+const { publicRuntimeConfig } = getConfig()
 
 export default function Home() {
   return (
@@ -11,7 +14,7 @@ export default function Home() {
             Welcome to Crypto Swap Hub 👋
           </h1>
 
-          <Client chainId={97} />
+          <Client chainId={+publicRuntimeConfig.chainId} />
         </div>
       </div>
     </WagmiContext>
