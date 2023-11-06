@@ -10,9 +10,10 @@ import TokenBalance from './token-balance'
 
 interface Props {
   chainId: number
+  tokenAddress: `0x${string}`
 }
 
-export default function Component({ chainId }: Props) {
+export default function Component({ chainId, tokenAddress }: Props) {
   const isClient = useIsClient()
   const { address, isConnected, isConnecting, isDisconnected } = useAccount()
   const { chain } = useNetwork()
@@ -44,10 +45,22 @@ export default function Component({ chainId }: Props) {
               <div className="font-bold text-1xl mb-2">Hi {address},</div>
 
               {chain && chain.id === chainId ? (
-                <p className="text-gray-700 text-base">
-                  Your network cryptocurrency balance:{' '}
-                  <TokenBalance chainId={chainId} />.
-                </p>
+                <>
+                  <p className="text-gray-700 text-base">
+                    Your network cryptocurrency balance:{' '}
+                    <TokenBalance chainId={chainId} />.
+                  </p>
+
+                  <p className="text-gray-700 text-base">
+                    Your tokens balance:{' '}
+                    <TokenBalance
+                      chainId={chainId}
+                      tokenAddress={tokenAddress}
+                      fractionDigits={0}
+                    />
+                    .
+                  </p>
+                </>
               ) : (
                 <>
                   <h2 className="text-1xl mb-4">
