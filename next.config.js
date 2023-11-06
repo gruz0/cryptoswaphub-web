@@ -15,6 +15,7 @@ const nextConfig = {
   // 2. docker-compose.production.yml
   publicRuntimeConfig: {
     tokenContract: process.env.TOKEN_CONTRACT,
+    chainId: process.env.CHAIN_ID,
   },
 }
 
