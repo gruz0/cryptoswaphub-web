@@ -7,8 +7,9 @@ services:
       dockerfile: Dockerfile
       # NOTE: We must expose these args to Dockerfile because they are used in next.config.js
       args:
-        - TOKEN_CONTRACT=${TOKEN_CONTRACT}
         - CHAIN_ID=${CHAIN_ID}
+        - MARKETPLACE_CONTRACT=${MARKETPLACE_CONTRACT}
+        - TOKEN_CONTRACT=${TOKEN_CONTRACT}
     env_file: .env
     stdin_open: true
     tty: true

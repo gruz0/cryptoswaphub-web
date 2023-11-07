@@ -1,6 +1,7 @@
 declare namespace NodeJS {
   export interface ProcessEnv {
-    TOKEN_CONTRACT: `0x${string}`
     CHAIN_ID: number
+    MARKETPLACE_CONTRACT: `0x${string}`
+    TOKEN_CONTRACT: `0x${string}`
   }
 }
