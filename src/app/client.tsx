@@ -10,10 +10,10 @@ import TokenBalance from './token-balance'
 
 interface Props {
   chainId: number
-  tokenAddress: `0x${string}`
+  tokenContract: `0x${string}`
 }
 
-export default function Component({ chainId, tokenAddress }: Props) {
+export default function Component({ chainId, tokenContract }: Props) {
   const isClient = useIsClient()
   const { address, isConnected, isConnecting, isDisconnected } = useAccount()
   const { chain } = useNetwork()
@@ -55,7 +55,7 @@ export default function Component({ chainId, tokenAddress }: Props) {
                     Your tokens balance:{' '}
                     <TokenBalance
                       chainId={chainId}
-                      tokenAddress={tokenAddress}
+                      tokenContract={tokenContract}
                       fractionDigits={0}
                     />
                     .
