@@ -1,4 +1,5 @@
 import React from 'react'
+import { reduceAddress } from './helpers'
 
 interface Props {
   blockchainExplorerURL: string
@@ -27,7 +28,7 @@ export default function Component({
               rel="nofollor noopener noreferrer"
               className="underline"
             >
-              {marketplaceContract}
+              {reduceAddress(marketplaceContract)}
             </a>
           </p>
 
@@ -39,7 +40,7 @@ export default function Component({
               rel="nofollor noopener noreferrer"
               className="underline"
             >
-              {tokenContract}
+              {reduceAddress(tokenContract)}
             </a>
           </p>
         </div>
