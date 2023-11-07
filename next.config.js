@@ -15,6 +15,7 @@ const nextConfig = {
   // 2. docker-compose.production.yml
   publicRuntimeConfig: {
     chainId: process.env.CHAIN_ID,
+    blockchainExplorerURL: process.env.BLOCKCHAIN_EXPLORER_URL,
     marketplaceContract: process.env.MARKETPLACE_CONTRACT,
     tokenContract: process.env.TOKEN_CONTRACT,
   },
