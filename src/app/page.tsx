@@ -17,7 +17,7 @@ export default function Home() {
 
           <Client
             chainId={+publicRuntimeConfig.chainId}
-            tokenAddress={publicRuntimeConfig.tokenContract}
+            tokenContract={publicRuntimeConfig.tokenContract}
           />
 
           <Contracts
