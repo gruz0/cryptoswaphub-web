@@ -13,7 +13,7 @@ export default function Component({
   tokenContract,
 }: Props) {
   return (
-    <div className="flex flex-col bg-gray-200 rounded shadow-lg mt-6">
+    <div className="flex flex-col bg-gray-100 rounded shadow-lg mt-6">
       <div className="w-full rounded shadow-lg divide-gray-300 divide-solid">
         <div className="px-6 py-4">
           <div className="font-bold text-1xl mb-2">
