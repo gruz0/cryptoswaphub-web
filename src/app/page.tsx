@@ -3,8 +3,14 @@ import React from 'react'
 import Client from './client'
 import Contracts from './contracts'
 import WagmiContext from './wagmi'
+import type { Metadata } from 'next'
 
 const { publicRuntimeConfig } = getConfig()
+
+export const metadata: Metadata = {
+  title: 'Crypto Swap Hub',
+  description: 'Buy project tokens using native network tokens',
+}
 
 export default function Home() {
   return (
