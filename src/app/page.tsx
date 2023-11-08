@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <WagmiContext>
       <div className="items-center w-screen h-screen flex justify-center">
-        <div className="max-w-xl bg-gray-100 p-6 rounded shadow-lg">
+        <div className="max-w-xl p-6">
           <h1 className="p-4 text-3xl font-bold">
             Welcome to Crypto Swap Hub 👋
           </h1>
