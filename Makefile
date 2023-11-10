@@ -38,7 +38,7 @@ prepare-prod-env:
 	@cp .env.production .env
 
 prod-docker-build: prepare-prod-env # Build Docker image
-	@${DOCKER_COMPOSE} -f docker-compose.production.yml build --build-arg UID=$$(id -u)
+	@${DOCKER_COMPOSE} -f docker-compose.production.yml build
 
 prod-docker-start: prepare-prod-env # Run Docker container
 	@${DOCKER_COMPOSE} -f docker-compose.production.yml up -d
